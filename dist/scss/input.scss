@@ -1,6 +1,52 @@
-h1{
-    color: blue;
-    height: 300px;
-    width: 300px;
-    font-size: 1.5rem;
+@use '_forward.scss' as index;
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    @include index.flex(null, space-between, center);
+    
+    background-color: index.$bg-color-primary;
+    height: 10vh;
+    padding: 3% 5%;
+
+    &-logo{
+        display: flex;
+        align-items: center;
+        font-size: 10vw;
+        gap: 0.5rem;
+    }
+
+    &-img{
+        width: 13vw;
+    }
+}
+
+main{
+    background-color: index.$bg-color-main-content;
+    @include index.flex(column, null, center);
+    min-height: 80vh;
+}
+
+.footer{
+    background-color: index.$bg-color-primary;    
+    @include index.flex(null, center, center);
+    height: 10vh;
+
+    &-p{
+        $size: 5vw;
+
+        @include index.flex(row, center, center);
+        gap: 0.5rem;
+        font-size: $size;
+
+        &-img{
+            width: calc($size + ($size/2));
+        }
+    }
 }

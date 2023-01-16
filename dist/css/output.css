@@ -10,9 +10,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(109, 108, 108);
   height: 10vh;
   padding: 3% 5%;
+}
+@media (min-width: 1000px) {
+  .header {
+    height: 5vh;
+  }
 }
 .header-logo {
   display: flex;
@@ -20,17 +25,53 @@ body {
   font-size: 10vw;
   gap: 0.5rem;
 }
+@media (min-width: 1000px) {
+  .header-logo {
+    font-size: 5vw;
+  }
+}
 .header-img {
   width: 13vw;
 }
+@media (min-width: 1000px) {
+  .header-img {
+    width: 6vw;
+  }
+  .header-img.menubar {
+    display: none;
+  }
+}
 
 .main {
-  background-color: rgb(243, 242, 242);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   min-height: 80vh;
-  padding-top: 5%;
+}
+.main .aside {
+  min-height: 80vh;
+}
+.main-aside-left {
+  display: none;
+  width: 25%;
+  background-color: rgb(201, 201, 201);
+}
+@media (min-width: 1000px) {
+  .main-aside-left {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.main-aside-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(243, 242, 242);
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .main-aside-right {
+    width: 75%;
+  }
 }
 .main-nav {
   width: 80%;
@@ -38,9 +79,14 @@ body {
 .main-nav-title {
   font-size: 8vw;
 }
+@media (min-width: 1000px) {
+  .main-nav-title {
+    font-size: 3vw;
+  }
+}
 .main-nav-taskList {
   list-style: none;
-  margin: 0;
+  margin: 1% 0;
   padding: 0;
 }
 .main-nav-taskList-task {
@@ -49,6 +95,12 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 5vw;
+  padding: 0 2%;
+}
+@media (min-width: 1000px) {
+  .main-nav-taskList-task {
+    font-size: 1.5vw;
+  }
 }
 .main-nav-taskList-task-left {
   display: flex;
@@ -60,11 +112,21 @@ body {
 .main-nav-taskList-task-left-completed-task {
   text-decoration: line-through;
 }
+.main-nav-taskList-task:hover {
+  cursor: pointer;
+  background-color: gray;
+}
 .main-nav-addButton {
   padding-top: 5%;
   background: none;
   border: none;
   font-size: 5vw;
+}
+@media (min-width: 1000px) {
+  .main-nav-addButton {
+    padding-top: 0;
+    font-size: 1.5vw;
+  }
 }
 .main-nav-addTaskForm {
   display: flex;
@@ -73,10 +135,20 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
+@media (min-width: 1000px) {
+  .main-nav-addTaskForm {
+    width: 40%;
+  }
+}
 .main-nav-addTaskForm-input {
   padding: 2%;
   border-radius: 5px;
   font-size: 5vw;
+}
+@media (min-width: 1000px) {
+  .main-nav-addTaskForm-input {
+    font-size: 1.5vw;
+  }
 }
 .main-nav-addTaskForm-section {
   display: flex;
@@ -88,8 +160,13 @@ body {
 .main-nav-addTaskForm-section-btn {
   font-size: 4vw;
   width: 40%;
-  padding: 3% 0;
+  padding: 3%;
   border: gray 1px solid;
+}
+@media (min-width: 1000px) {
+  .main-nav-addTaskForm-section-btn {
+    font-size: 1.3vw;
+  }
 }
 .main-nav-addTaskForm-section-btn.save {
   background-color: rgb(144, 238, 144);
@@ -99,7 +176,7 @@ body {
 }
 
 .footer {
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(109, 108, 108);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,8 +190,18 @@ body {
   gap: 0.5rem;
   font-size: 4vw;
 }
+@media (min-width: 1000px) {
+  .footer-p {
+    font-size: 2vw;
+  }
+}
 .footer-p-img {
   width: 6vw;
+}
+@media (min-width: 1000px) {
+  .footer-p-img {
+    width: 2vw;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

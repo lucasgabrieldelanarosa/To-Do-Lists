@@ -1,1 +1,1 @@
-console.log("teste");
+(()=>{const e=document.querySelector("#addTaskBtn");e.addEventListener("click",(()=>{e.parentNode.removeChild(e)}))})();

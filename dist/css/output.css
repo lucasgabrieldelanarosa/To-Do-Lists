@@ -66,6 +66,37 @@ body {
   border: none;
   font-size: 5vw;
 }
+.main-nav-addTaskForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-nav-addTaskForm-input {
+  padding: 2%;
+  border-radius: 5px;
+  font-size: 5vw;
+}
+.main-nav-addTaskForm-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+.main-nav-addTaskForm-section-btn {
+  font-size: 4vw;
+  width: 40%;
+  padding: 3% 0;
+  border: gray 1px solid;
+}
+.main-nav-addTaskForm-section-btn.save {
+  background-color: rgb(144, 238, 144);
+}
+.main-nav-addTaskForm-section-btn.cancel {
+  background-color: rgb(238, 144, 144);
+}
 
 .footer {
   background-color: rgb(129, 129, 129);

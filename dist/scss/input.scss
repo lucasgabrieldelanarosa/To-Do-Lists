@@ -1,87 +1,119 @@
 @use '_forward.scss' as index;
 
-body{
+body {
     margin: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-.header{
+.header {
     @include index.flex(null, space-between, center);
-    
+
     background-color: index.$bg-color-primary;
     height: 10vh;
     padding: 3% 5%;
 
-    &-logo{
+    &-logo {
         display: flex;
         align-items: center;
         font-size: 10vw;
         gap: 0.5rem;
     }
 
-    &-img{
+    &-img {
         width: 13vw;
     }
 }
 
-.main{
+.main {
     background-color: index.$bg-color-main-content;
     @include index.flex(column, null, center);
     min-height: 80vh;
     padding-top: 5%;
 
-    &-nav{
+    &-nav {
         width: 80%;
 
-        &-title{
+        &-title {
             font-size: 8vw;
         }
 
-        &-taskList{
+        &-taskList {
             list-style: none;
             margin: 0;
             padding: 0;
 
-            &-task{
+            &-task {
                 @include index.flex(row, space-between, center);
                 font-size: 5vw;
-                
-                &-left{
+
+                &-left {
                     @include index.flex(row, center, center);
                     gap: 0.5rem;
 
-                    &-completed-task{
+                    &-completed-task {
                         text-decoration: line-through;
                     }
                 }
             }
         }
 
-        &-addButton{
+        &-addButton {
             padding-top: 5%;
             background: none;
             border: none;
             font-size: 5vw;
         }
+
+        &-addTaskForm {
+            @include index.flex(column, center, center);
+            gap: 0.5rem;
+
+            &-input {
+                padding: 2%;
+                border-radius: 5px;
+                font-size: 5vw;
+            }
+
+            &-section {
+                @include index.flex(row, space-around, center);
+                width: 80%;
+
+                &-btn {
+                    font-size: 4vw;
+                    width: 40%;
+                    padding: 3% 0;
+                    border: index.$bor-color-addTaskBtn 1px solid;
+
+                    &.save {
+                        background-color: index.$bg-color-btn-save;
+                    }
+
+                    &.cancel {
+                        background-color: index.$bg-color-btn-cancel;
+                    }
+                }
+            }
+        }
+
     }
 
 }
 
-.footer{
-    background-color: index.$bg-color-primary;    
+.footer {
+    background-color: index.$bg-color-primary;
     @include index.flex(null, center, center);
     height: 10vh;
 
-    &-p{
+    &-p {
         $size: 4vw;
 
         @include index.flex(row, center, center);
         gap: 0.5rem;
         font-size: $size;
 
-        &-img{
+        &-img {
             width: calc($size + ($size/2));
         }
     }

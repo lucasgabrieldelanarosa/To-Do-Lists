@@ -3,7 +3,6 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -27,10 +26,47 @@ body{
     }
 }
 
-main{
+.main{
     background-color: index.$bg-color-main-content;
     @include index.flex(column, null, center);
     min-height: 80vh;
+    padding-top: 5%;
+
+    &-nav{
+        width: 80%;
+
+        &-title{
+            font-size: 8vw;
+        }
+
+        &-taskList{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            &-task{
+                @include index.flex(row, space-between, center);
+                font-size: 5vw;
+                
+                &-left{
+                    @include index.flex(row, center, center);
+                    gap: 0.5rem;
+
+                    &-completed-task{
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+
+        &-addButton{
+            padding-top: 5%;
+            background: none;
+            border: none;
+            font-size: 5vw;
+        }
+    }
+
 }
 
 .footer{
@@ -39,7 +75,7 @@ main{
     height: 10vh;
 
     &-p{
-        $size: 5vw;
+        $size: 4vw;
 
         @include index.flex(row, center, center);
         gap: 0.5rem;

@@ -2,7 +2,6 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -25,12 +24,47 @@ body {
   width: 13vw;
 }
 
-main {
-  background-color: rgb(221, 221, 221);
+.main {
+  background-color: rgb(243, 242, 242);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 80vh;
+  padding-top: 5%;
+}
+.main-nav {
+  width: 80%;
+}
+.main-nav-title {
+  font-size: 8vw;
+}
+.main-nav-taskList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav-taskList-task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 5vw;
+}
+.main-nav-taskList-task-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-nav-taskList-task-left-completed-task {
+  text-decoration: line-through;
+}
+.main-nav-addButton {
+  padding-top: 5%;
+  background: none;
+  border: none;
+  font-size: 5vw;
 }
 
 .footer {
@@ -46,10 +80,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 .footer-p-img {
-  width: 7.5vw;
+  width: 6vw;
 }
 
 /*# sourceMappingURL=output.css.map */

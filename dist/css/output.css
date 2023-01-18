@@ -14,7 +14,7 @@ body {
   height: 10vh;
   padding: 3% 5%;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .header {
     height: 5vh;
   }
@@ -25,7 +25,7 @@ body {
   font-size: 10vw;
   gap: 0.5rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .header-logo {
     font-size: 5vw;
   }
@@ -33,7 +33,7 @@ body {
 .header-img {
   width: 13vw;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .header-img {
     width: 6vw;
   }
@@ -55,11 +55,76 @@ body {
   width: 25%;
   background-color: rgb(201, 201, 201);
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-aside-left {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
   }
+}
+.main-aside-left-listContainer {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  width: 60%;
+}
+.main-aside-left-listContainer-navBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5vw;
+  width: 100%;
+  padding: 3%;
+}
+.main-aside-left-listContainer-navBtn img {
+  width: 2.5vw;
+}
+.main-aside-left-listContainer-navBtn.active {
+  background: rgb(158, 158, 158);
+}
+.main-aside-left-listContainer-navBtn:hover {
+  background-color: rgb(158, 158, 158);
+  cursor: pointer;
+}
+.main-aside-left-addProjectBtn {
+  font-size: 1.3vw;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.main-aside-left-inputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-aside-left-inputForm-input {
+  padding: 2%;
+  border-radius: 5px;
+  font-size: 1.2vw;
+}
+.main-aside-left-inputForm-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+.main-aside-left-inputForm-section-btn {
+  font-size: 4vw;
+  width: 40%;
+  padding: 3%;
+  border: gray 1px solid;
+  font-size: 1.2vw;
+}
+.main-aside-left-inputForm-section-btn.save {
+  background-color: rgb(144, 238, 144);
+}
+.main-aside-left-inputForm-section-btn.cancel {
+  background-color: rgb(238, 144, 144);
 }
 .main-aside-right {
   display: flex;
@@ -68,7 +133,7 @@ body {
   background-color: rgb(243, 242, 242);
   width: 100%;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-aside-right {
     width: 75%;
   }
@@ -79,14 +144,13 @@ body {
 .main-nav-title {
   font-size: 8vw;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-title {
     font-size: 3vw;
   }
 }
 .main-nav-taskList {
   list-style: none;
-  margin: 1% 0;
   padding: 0;
 }
 .main-nav-taskList-task {
@@ -97,7 +161,7 @@ body {
   font-size: 5vw;
   padding: 0 2%;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-taskList-task {
     font-size: 1.5vw;
   }
@@ -114,15 +178,16 @@ body {
 }
 .main-nav-taskList-task:hover {
   cursor: pointer;
-  background-color: gray;
+  background-color: rgb(158, 158, 158);
 }
 .main-nav-addButton {
   padding-top: 5%;
   background: none;
   border: none;
   font-size: 5vw;
+  cursor: pointer;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-addButton {
     padding-top: 0;
     font-size: 1.5vw;
@@ -135,7 +200,7 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-addTaskForm {
     width: 40%;
   }
@@ -145,7 +210,7 @@ body {
   border-radius: 5px;
   font-size: 5vw;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-addTaskForm-input {
     font-size: 1.5vw;
   }
@@ -163,7 +228,7 @@ body {
   padding: 3%;
   border: gray 1px solid;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main-nav-addTaskForm-section-btn {
     font-size: 1.3vw;
   }
@@ -190,7 +255,7 @@ body {
   gap: 0.5rem;
   font-size: 4vw;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .footer-p {
     font-size: 2vw;
   }
@@ -198,7 +263,7 @@ body {
 .footer-p-img {
   width: 6vw;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .footer-p-img {
     width: 2vw;
   }

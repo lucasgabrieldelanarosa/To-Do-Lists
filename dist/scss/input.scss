@@ -59,7 +59,75 @@ body {
         background-color: index.$bg-color-aside-left;
 
         @media (min-width: index.$min-desktop-size){
-            @include index.flex(row, null, null); 
+            @include index.flex(column, null, center); 
+        }
+
+        &-listContainer{
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 0.5rem;
+            width: 60%;
+
+            &-navBtn{
+                @include index.flex(row, null, center);
+                gap: 0.5rem;
+                font-size: 1.5vw;
+                width: 100%;
+                padding: 3%;
+
+                img{
+                    width: 2.5vw;
+                }
+
+                &.active{
+                    background: index.$bg-color-projectBtn-hover;
+                }
+                &:hover{
+                    background-color: index.$bg-color-projectBtn-hover;
+                    cursor: pointer
+                }
+            }
+        }
+
+        &-addProjectBtn{
+            font-size: 1.3vw;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        &-inputForm {
+            @include index.flex(column, center, center);
+            gap: 0.5rem;
+
+            &-input {
+                padding: 2%;
+                border-radius: 5px;
+                font-size: 1.2vw;
+
+            }
+
+            &-section {
+                @include index.flex(row, space-around, center);
+                width: 80%;
+                
+                &-btn {
+                    font-size: 4vw;
+                    width: 40%;
+                    padding: 3%;
+                    border: index.$bor-color-addTaskBtn 1px solid;
+                    font-size: 1.2vw;
+
+                    &.save {
+                        background-color: index.$bg-color-btn-save;
+                    }
+
+                    &.cancel {
+                        background-color: index.$bg-color-btn-cancel;
+                    }
+                }
+            }
         }
     }
 
@@ -86,7 +154,6 @@ body {
 
         &-taskList {
             list-style: none;
-            margin: 1% 0;
             padding: 0;
 
             &-task {
@@ -109,7 +176,7 @@ body {
                 
                 &:hover{
                     cursor: pointer;
-                    background-color: gray;
+                    background-color: index.$bg-color-projectBtn-hover;
                 }
             }
         }
@@ -119,6 +186,7 @@ body {
             background: none;
             border: none;
             font-size: 5vw;
+            cursor: pointer;
 
             @media (min-width: index.$min-desktop-size){
                 padding-top: 0;
